@@ -58,9 +58,12 @@ var app = new Vue ({
         },
         addToDrink: function() {
             console.log(this.newToDrink);
-            if(this.newToDrink.trim().length > 0)
             this.toDrinkList.push(this.newToDrink);
-            this.newToDrink = "";
+            this.newToDrink = {
+            text: "",
+            completed: false
+            };
+            console.log(this.toDrinkList);
         }
     }
 })
