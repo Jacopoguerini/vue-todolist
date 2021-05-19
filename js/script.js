@@ -71,9 +71,8 @@ var app = new Vue ({
             };
             // console.log(this.toDrinkList);
         },
-        done: function() {
-            this.toDrinkList.completed = !this.toDrinkList.completed;
-            console.log(this.toDrinkList);
+        done: function(element) {
+            element.completed = !element.completed;
         }
     },
 })

@@ -23,8 +23,8 @@
 
             <div id="list">
                 <ul v-if="toDrinkList.length > 0">
-                    <li v-for="(element, index) in toDrinkList" @click="done">
-                        {{ element.text }}
+                    <li v-for="(element, index) in toDrinkList" >
+                        <span @click="done(element)" :class="(element.completed == true) ? 'done' : ''">{{ element.text }}</span>
                         <i class="fas fa-times-circle"
                         @click="removeFromList(index)"></i>
                     </li>
