@@ -46,11 +46,18 @@ var app = new Vue ({
             text: "Da Hong Pao",
             completed: false
             }
-        ]
+        ],
+        newToDrink: ""
     },
     methods: {
         removeFromList: function(removeIndex) {
             this.toDrinkList.splice(removeIndex, 1);
+        },
+        addToDrink: function() {
+            console.log(this.newToDrink);
+            if(this.newToDrink.trim().length > 0)
+            this.toDrinkList.push(this.newToDrink);
+            this.newToDrink = "";
         }
     }
 })

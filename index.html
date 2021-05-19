@@ -15,9 +15,11 @@
     <body>
         
         <div id="root">
-            <input type="text" placeholder="Aggiungi un t&egrave;">
-            <button>Aggiungi</button>
 
+            <div class="input">
+                <input type="text" placeholder="Aggiungi un t&egrave;" v-model="newToDrink" @keydown.enter="addToDrink">
+                <button @click="addToDrink">Aggiungi</button>
+            </div>
 
             <div id="list">
                 <ul v-if="toDrinkList.length > 0">
