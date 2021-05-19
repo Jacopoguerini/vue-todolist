@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
-        <title>ToDrink List</title>
+        <title>To-Drink List</title>
     </head>
     <body>
         
@@ -23,7 +23,7 @@
 
             <div id="list">
                 <ul v-if="toDrinkList.length > 0">
-                    <li v-for="(element, index) in toDrinkList">
+                    <li v-for="(element, index) in toDrinkList" @click="done">
                         {{ element.text }}
                         <i class="fas fa-times-circle"
                         @click="removeFromList(index)"></i>
