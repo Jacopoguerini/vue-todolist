@@ -47,7 +47,10 @@ var app = new Vue ({
             completed: false
             }
         ],
-        newToDrink: ""
+        newToDrink: {
+            text: "",
+            completed: false
+        }
     },
     methods: {
         removeFromList: function(removeIndex) {
