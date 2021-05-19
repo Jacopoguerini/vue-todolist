@@ -41,7 +41,16 @@ var app = new Vue ({
             {
             text: "Tai Ping Hou Kui",
             completed: false
+            },
+            {
+            text: "Da Hong Pao",
+            completed: false
             }
         ]
+    },
+    methods: {
+        removeFromList: function(removeIndex) {
+            this.toDrinkList.splice(removeIndex, 1);
+        }
     }
 })

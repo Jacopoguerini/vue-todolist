@@ -15,13 +15,19 @@
     <body>
         
         <div id="root">
+            <input type="text" placeholder="Aggiungi un t&egrave;">
+            <button>Aggiungi</button>
+
+
             <div id="list">
                 <ul v-if="toDrinkList.length > 0">
-                    <li v-for="(toDrink, index) in toDrinkList">
-                        {{ toDrinkList.text }}
-                        <i class="fas fa-times-circle"></i>
+                    <li v-for="(element, index) in toDrinkList">
+                        {{ element.text }}
+                        <i class="fas fa-times-circle"
+                        @click="removeFromList(index)"></i>
                     </li>
                 </ul>
+                <h2 v-else>Non ci sono altri t&egrave; da bere in lista! Aggiungine altri!</h2>
             </div>
 
 
